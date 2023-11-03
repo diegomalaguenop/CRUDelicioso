@@ -1,0 +1,46 @@
+@model Plato
+
+@{
+    ViewData["Title"] = "Detalles del Plato";
+}
+
+<h2>Detalles del Plato</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Chef
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Chef
+        </dd>
+        
+        <dt class="col-sm-2">
+            Sabor
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Tastiness
+        </dd>
+
+        <dt class="col-sm-2">
+            Calorías
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Calories
+        </dd>
+        
+        <dt class="col-sm-2">
+            Descripción
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Description
+        </dd>
+    </dl>
+</div>
+
+<p>
+    <a asp-controller="Home" asp-action="EditarPlato" asp-route-id="@Model.Id">Editar</a>
+    <a asp-action="EliminarPlato" asp-route-id="@Model.Id">Eliminar</a>
+</p>

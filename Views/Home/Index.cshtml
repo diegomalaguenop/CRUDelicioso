@@ -1,0 +1,15 @@
+﻿<div class="text-center">
+    <h1 class="display-4">Welcome to CRUDelicious</h1>
+    <p>Home <a asp-controller="Home" asp-action="FormularioPlato">Add a Dish</a>.</p>
+</div>
+
+<h3>Check out some recent dishes</h3>
+
+<div>
+    @foreach (var plato in Model)
+    {
+        <div>
+            <p><a asp-controller="Home" asp-action="DetallesPlato" asp-route-id="@plato.Id">@plato.Name</a> by @plato.Chef</p>
+        </div>
+    }
+</div>

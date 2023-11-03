@@ -1,0 +1,51 @@
+@model Plato
+<!DOCTYPE html>
+
+<head>
+    <title>Formulario de Platos</title>
+</head>
+<body>
+   <form method="POST" action="/nuevo/plato">
+        <div>
+            <label asp-for="Name"> Nombre del plato: </label>
+            <input type="text" asp-for="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <label asp-for="Chef"> Chef del plato: </label>
+            <input type="text" asp-for="Chef">
+            <span asp-validation-for="Chef"></span>
+        </div>
+        <div>
+            <label asp-for="Tastiness"> Sabor del plato: </label>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <span asp-validation-for="Tastiness"></span>
+        </div>
+        <div>
+            <label asp-for="Calories"> Calorias del plato: </label>
+            <select asp-for="Calories">
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+                <option value="400">400</option>
+                <option value="500">500</option>
+            </select>
+            <span asp-validation-for="Calories"></span>
+        </div>
+        <div>
+            <label asp-for="Description"> Descripcion del plato: </label>
+            <input type="text" asp-for="Description">
+            <span asp-validation-for="Description"></span>
+        </div>
+        <button class="btn btn-primary">
+            Agregar
+        </button>
+    </form>
+</body>
+</html>
